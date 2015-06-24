@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ResearchKit
+import ResearchKit.Private
+import WebKit
 
 class SecondViewController: UIViewController {
 

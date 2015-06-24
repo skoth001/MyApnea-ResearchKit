@@ -14,6 +14,10 @@
 		6DDC89321B3B41DA007DD498 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC89311B3B41DA007DD498 /* Images.xcassets */; };
 		6DDC89351B3B41DA007DD498 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC89331B3B41DA007DD498 /* LaunchScreen.xib */; };
 		6DDC89411B3B41DA007DD498 /* MyApneaRKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC89401B3B41DA007DD498 /* MyApneaRKTests.swift */; };
+		6DDC89541B3B4921007DD498 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDC89511B3B4910007DD498 /* ResearchKit.framework */; };
+		6DDC89551B3B4921007DD498 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDC89511B3B4910007DD498 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DDC895B1B3B497F007DD498 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC895A1B3B497F007DD498 /* ConsentDocument.swift */; };
+		6DDC895D1B3B49A2007DD498 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC895C1B3B49A2007DD498 /* ConsentTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +28,42 @@
 			remoteGlobalIDString = 6DDC89221B3B41DA007DD498;
 			remoteInfo = MyApneaRK;
 		};
+		6DDC89501B3B4910007DD498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		6DDC89521B3B4910007DD498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		6DDC89561B3B4921007DD498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DDC89581B3B4921007DD498 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DDC89551B3B4921007DD498 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6DDC89231B3B41DA007DD498 /* MyApneaRK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApneaRK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +77,9 @@
 		6DDC893A1B3B41DA007DD498 /* MyApneaRKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyApneaRKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDC893F1B3B41DA007DD498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DDC89401B3B41DA007DD498 /* MyApneaRKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApneaRKTests.swift; sourceTree = "<group>"; };
+		6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		6DDC895A1B3B497F007DD498 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		6DDC895C1B3B49A2007DD498 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DDC89541B3B4921007DD498 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +104,7 @@
 		6DDC891A1B3B41DA007DD498 = {
 			isa = PBXGroup;
 			children = (
+				6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */,
 				6DDC89251B3B41DA007DD498 /* MyApneaRK */,
 				6DDC893D1B3B41DA007DD498 /* MyApneaRKTests */,
 				6DDC89241B3B41DA007DD498 /* Products */,
@@ -82,6 +126,8 @@
 				6DDC89281B3B41DA007DD498 /* AppDelegate.swift */,
 				6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */,
 				6DDC892C1B3B41DA007DD498 /* SecondViewController.swift */,
+				6DDC895A1B3B497F007DD498 /* ConsentDocument.swift */,
+				6DDC895C1B3B49A2007DD498 /* ConsentTask.swift */,
 				6DDC892E1B3B41DA007DD498 /* Main.storyboard */,
 				6DDC89311B3B41DA007DD498 /* Images.xcassets */,
 				6DDC89331B3B41DA007DD498 /* LaunchScreen.xib */,
@@ -115,6 +161,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6DDC894B1B3B4910007DD498 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DDC89511B3B4910007DD498 /* ResearchKit.framework */,
+				6DDC89531B3B4910007DD498 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +180,12 @@
 				6DDC891F1B3B41DA007DD498 /* Sources */,
 				6DDC89201B3B41DA007DD498 /* Frameworks */,
 				6DDC89211B3B41DA007DD498 /* Resources */,
+				6DDC89581B3B4921007DD498 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6DDC89571B3B4921007DD498 /* PBXTargetDependency */,
 			);
 			name = MyApneaRK;
 			productName = MyApneaRK;
@@ -182,6 +239,12 @@
 			mainGroup = 6DDC891A1B3B41DA007DD498;
 			productRefGroup = 6DDC89241B3B41DA007DD498 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6DDC894B1B3B4910007DD498 /* Products */;
+					ProjectRef = 6DDC894A1B3B4910007DD498 /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6DDC89221B3B41DA007DD498 /* MyApneaRK */,
@@ -189,6 +252,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6DDC89511B3B4910007DD498 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = 6DDC89501B3B4910007DD498 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DDC89531B3B4910007DD498 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = 6DDC89521B3B4910007DD498 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6DDC89211B3B41DA007DD498 /* Resources */ = {
@@ -216,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DDC892D1B3B41DA007DD498 /* SecondViewController.swift in Sources */,
+				6DDC895B1B3B497F007DD498 /* ConsentDocument.swift in Sources */,
+				6DDC895D1B3B49A2007DD498 /* ConsentTask.swift in Sources */,
 				6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */,
 				6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */,
 			);
@@ -236,6 +318,11 @@
 			isa = PBXTargetDependency;
 			target = 6DDC89221B3B41DA007DD498 /* MyApneaRK */;
 			targetProxy = 6DDC893B1B3B41DA007DD498 /* PBXContainerItemProxy */;
+		};
+		6DDC89571B3B4921007DD498 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = 6DDC89561B3B4921007DD498 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
