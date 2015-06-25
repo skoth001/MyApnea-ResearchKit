@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="743" y="-562"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -70,6 +70,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="UAH-Zz-Kwv" kind="relationship" relationship="viewControllers" id="BkF-6v-Uor"/>
+                        <segue destination="xbE-6v-8di" kind="relationship" relationship="viewControllers" id="Z8O-yo-ZOD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -101,7 +102,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHt-qH-vzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="459"/>
+            <point key="canvasLocation" x="732" y="120"/>
+        </scene>
+        <!--Tests-->
+        <scene sceneID="c7N-pl-3y2">
+            <objects>
+                <viewController id="xbE-6v-8di" customClass="CognitiveTaskViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mTR-4C-Bdk"/>
+                        <viewControllerLayoutGuide type="bottom" id="5om-Kw-cG5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XBm-c4-vPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tests" image="first" id="rjF-2d-zyL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aF-pK-cHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="814"/>
         </scene>
     </scenes>
     <resources>
