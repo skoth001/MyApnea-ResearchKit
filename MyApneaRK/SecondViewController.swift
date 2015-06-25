@@ -13,8 +13,8 @@ import WebKit
 
 class SecondViewController: UITableViewController, UITableViewDelegate {
     
-    var surveys = ["About Me"]
-    var tasks = [AboutMeSurveyTask]
+    var surveys = ["About Me", "Additional Information"]
+    var tasks = [AboutMeSurveyTask, AdditionalInformationSurveyTask]
 
     override func viewDidLoad() {
         super.viewDidLoad()
