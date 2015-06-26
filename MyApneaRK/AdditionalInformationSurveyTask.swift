@@ -48,10 +48,10 @@ public var AdditionalInformationSurveyTask: ORKOrderedTask {
     // Daily Activities
     let activitiesQuestionStepTitle = "What best describes your current maind aily activities?"
     let activitiesChoices = [
-        ORKTextChoice(text: "Working full time", detailText: "(day shifts)", value: 0, exclusive: true),
-        ORKTextChoice(text: "Working full time", detailText: "(night shifts)", value: 1, exclusive: true),
-        ORKTextChoice(text: "Working part time", detailText: "(day shifts)", value: 2, exclusive: true),
-        ORKTextChoice(text: "Working part time", detailText: "(night shifts)", value: 3, exclusive: true),
+        ORKTextChoice(text: "Working full time", detailText: "(day shifts)", value: 0),
+        ORKTextChoice(text: "Working full time", detailText: "(night shifts)", value: 1),
+        ORKTextChoice(text: "Working part time", detailText: "(day shifts)", value: 2),
+        ORKTextChoice(text: "Working part time", detailText: "(night shifts)", value: 3),
         ORKTextChoice(text: "Unemployed, laid off, or looking for work", value: 4),
         ORKTextChoice(text: "In school (full- or part-time student)", value: 5),
         ORKTextChoice(text: "Stay-at-home parent or keeping household", value: 6),
