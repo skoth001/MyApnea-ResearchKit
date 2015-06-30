@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-36-b2Q">
-                                <rect key="frame" x="271" y="104" width="54" height="21"/>
+                                <rect key="frame" x="283" y="104" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -159,20 +159,103 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gE-0U-ZSQ">
+                                <rect key="frame" x="32" y="250" width="300" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B68-DS-fhH">
+                                        <rect key="frame" x="47" y="98" width="47" height="30"/>
+                                        <state key="normal" title="I agree">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="agreeButtonClicked:" destination="qO9-Tv-aPD" eventType="touchUpInside" id="oqr-qj-fez"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSl-uA-0qc">
+                                        <rect key="frame" x="204" y="98" width="67" height="30"/>
+                                        <state key="normal" title="I disagree">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="disagreeButtonClicked:" destination="qO9-Tv-aPD" eventType="touchUpInside" id="HxN-sM-okb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This should be a research priority:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amk-1L-ibg">
+                                        <rect key="frame" x="20" y="19" width="260" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="AWZ-6S-kxH"/>
+                                            <constraint firstAttribute="width" constant="260" id="Kl0-eX-ba8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="amk-1L-ibg" firstAttribute="top" secondItem="8gE-0U-ZSQ" secondAttribute="top" constant="19" id="NCH-Vo-Fjp"/>
+                                    <constraint firstAttribute="height" constant="150" id="YmX-Sn-CtV"/>
+                                    <constraint firstAttribute="centerX" secondItem="amk-1L-ibg" secondAttribute="centerX" id="agn-6H-LLR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj4-Sc-WOG">
+                                <rect key="frame" x="310" y="230" width="285" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Endorsement:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrx-lF-reX">
+                                        <rect key="frame" x="85" y="21" width="111" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="0bS-l7-k6J"/>
+                                            <constraint firstAttribute="height" constant="21" id="LgB-mT-4oB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="endorsement_value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-4D-3km">
+                                        <rect key="frame" x="67" y="50" width="150" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tkn-fD-Orb">
+                                        <rect key="frame" x="67" y="106" width="150" height="2"/>
+                                        <color key="tintColor" red="0.0" green="0.63840336450422652" blue="0.31900625179239767" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tkn-fD-Orb" firstAttribute="top" secondItem="axQ-4D-3km" secondAttribute="bottom" constant="35" id="3aK-gb-T9Y"/>
+                                    <constraint firstItem="mrx-lF-reX" firstAttribute="top" secondItem="mj4-Sc-WOG" secondAttribute="top" constant="21" id="BHM-Ut-cda"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tkn-fD-Orb" secondAttribute="trailing" constant="20" id="Civ-bn-VL0"/>
+                                    <constraint firstAttribute="width" constant="285" id="Oaq-UQ-6Jt"/>
+                                    <constraint firstAttribute="centerX" secondItem="mrx-lF-reX" secondAttribute="centerX" id="bd6-V3-OsB"/>
+                                    <constraint firstItem="Tkn-fD-Orb" firstAttribute="leading" secondItem="mj4-Sc-WOG" secondAttribute="leading" constant="20" id="cJb-SZ-Qad"/>
+                                    <constraint firstAttribute="height" constant="188" id="rvo-wf-apr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="js6-w1-FTY" secondAttribute="trailing" constant="40" id="0LX-Z8-lJO"/>
+                            <constraint firstAttribute="centerX" secondItem="mj4-Sc-WOG" secondAttribute="centerX" id="Bh0-3j-MjM"/>
+                            <constraint firstItem="8gE-0U-ZSQ" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="20" id="ETv-77-7fP"/>
+                            <constraint firstItem="8gE-0U-ZSQ" firstAttribute="top" secondItem="js6-w1-FTY" secondAttribute="bottom" constant="65" id="N8P-6Q-mRz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8gE-0U-ZSQ" secondAttribute="trailing" constant="20" id="Nlu-lz-Gdq"/>
                             <constraint firstItem="cJM-36-b2Q" firstAttribute="top" secondItem="2BQ-xJ-ukd" secondAttribute="bottom" constant="40" id="XVj-PV-CGb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cJM-36-b2Q" secondAttribute="trailing" constant="40" id="Z7j-Yc-HcH"/>
                             <constraint firstItem="cJM-36-b2Q" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="h69-7q-Bvm"/>
                             <constraint firstItem="js6-w1-FTY" firstAttribute="top" secondItem="cJM-36-b2Q" secondAttribute="bottom" constant="40" id="hBW-Wt-9dy"/>
+                            <constraint firstItem="mj4-Sc-WOG" firstAttribute="top" secondItem="js6-w1-FTY" secondAttribute="bottom" constant="44" id="lfg-LS-Xu1"/>
                             <constraint firstItem="js6-w1-FTY" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="rl0-S7-Vr9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="js6-w1-FTY" id="73Y-fI-ry6"/>
+                        <outlet property="endorsementProgressView" destination="Tkn-fD-Orb" id="8Ur-O6-PjS"/>
+                        <outlet property="endorsementValueLabel" destination="axQ-4D-3km" id="o6h-EX-Osr"/>
+                        <outlet property="resultsView" destination="mj4-Sc-WOG" id="e0I-g2-tnr"/>
                         <outlet property="titleLabel" destination="cJM-36-b2Q" id="HIv-P6-0sK"/>
+                        <outlet property="votingView" destination="8gE-0U-ZSQ" id="YjL-kC-FL3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQe-cn-taO" userLabel="First Responder" sceneMemberID="firstResponder"/>

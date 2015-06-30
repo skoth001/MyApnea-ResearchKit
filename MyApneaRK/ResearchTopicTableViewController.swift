@@ -56,6 +56,8 @@ class ResearchTopicTableViewController: UITableViewController, UITableViewDataSo
                     println(researchTopicIndex)
                     destination.researchTopicTitle = researchTopics[researchTopicIndex].valueForKey("title") as! String
                     destination.researchTopicDescription = researchTopics[researchTopicIndex].valueForKey("description") as! String
+                    destination.researchTopicRating = researchTopics[researchTopicIndex].valueForKey("endorsement") as! Float
+                    destination.researchTopicVoteCount = researchTopics[researchTopicIndex].valueForKey("votes") as! Int
                 }
             }
         }
