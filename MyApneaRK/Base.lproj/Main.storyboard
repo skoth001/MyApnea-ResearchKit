@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -70,7 +71,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="UAH-Zz-Kwv" kind="relationship" relationship="viewControllers" id="BkF-6v-Uor"/>
-                        <segue destination="V0O-PO-I9t" kind="relationship" relationship="viewControllers" id="a0U-xu-1RF"/>
+                        <segue destination="ysq-2H-0Tt" kind="relationship" relationship="viewControllers" id="a0U-xu-1RF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="760" y="459"/>
         </scene>
-        <!--Research Topics-->
+        <!--Research Topic Table View Controller-->
         <scene sceneID="PlD-q8-c8K">
             <objects>
                 <tableViewController id="V0O-PO-I9t" customClass="ResearchTopicTableViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,11 +114,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mbZ-eh-End">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ResearchTopicCell" id="mbZ-eh-End">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mbZ-eh-End" id="Vaw-7B-Fhc">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qO9-Tv-aPD" kind="show" identifier="ShowResearchTopicSegue" id="0de-uf-hCx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -125,9 +129,72 @@
                             <outlet property="delegate" destination="V0O-PO-I9t" id="jDS-VK-1gp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Research Topics" image="second" id="wlb-Mw-guh"/>
+                    <navigationItem key="navigationItem" id="pUP-we-Zgk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEj-nu-gmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="1155"/>
+        </scene>
+        <!--Research Topic View Controller-->
+        <scene sceneID="nII-tc-z3A">
+            <objects>
+                <viewController id="qO9-Tv-aPD" customClass="ResearchTopicViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2BQ-xJ-ukd"/>
+                        <viewControllerLayoutGuide type="bottom" id="VSg-Ru-Rc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOT-52-qqb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-36-b2Q">
+                                <rect key="frame" x="271" y="104" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js6-w1-FTY">
+                                <rect key="frame" x="256" y="165" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="js6-w1-FTY" secondAttribute="trailing" constant="40" id="0LX-Z8-lJO"/>
+                            <constraint firstItem="cJM-36-b2Q" firstAttribute="top" secondItem="2BQ-xJ-ukd" secondAttribute="bottom" constant="40" id="XVj-PV-CGb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cJM-36-b2Q" secondAttribute="trailing" constant="40" id="Z7j-Yc-HcH"/>
+                            <constraint firstItem="cJM-36-b2Q" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="h69-7q-Bvm"/>
+                            <constraint firstItem="js6-w1-FTY" firstAttribute="top" secondItem="cJM-36-b2Q" secondAttribute="bottom" constant="40" id="hBW-Wt-9dy"/>
+                            <constraint firstItem="js6-w1-FTY" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="rl0-S7-Vr9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="js6-w1-FTY" id="73Y-fI-ry6"/>
+                        <outlet property="titleLabel" destination="cJM-36-b2Q" id="HIv-P6-0sK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQe-cn-taO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="1155"/>
+        </scene>
+        <!--Research Topics-->
+        <scene sceneID="BX9-VW-mVZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ysq-2H-0Tt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Research Topics" image="second" id="wlb-Mw-guh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjJ-ce-AGS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V0O-PO-I9t" kind="relationship" relationship="rootViewController" id="pta-Y6-rjt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GD7-wO-VOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="1155"/>
         </scene>
