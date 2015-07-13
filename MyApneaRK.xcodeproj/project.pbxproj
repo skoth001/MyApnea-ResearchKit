@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D27AD061B541CD3009F91B3 /* ResearchTopicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD041B541CD3009F91B3 /* ResearchTopicTableViewController.swift */; };
+		6D27AD071B541CD3009F91B3 /* ResearchTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */; };
+		6D27AD0B1B542445009F91B3 /* ResearchTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */; };
 		6D4268C31B50BC0D00AE3A83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */; };
 		6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */; };
 		6D7D495A1B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */; };
@@ -78,6 +81,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D27AD041B541CD3009F91B3 /* ResearchTopicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchTopicTableViewController.swift; sourceTree = "<group>"; };
+		6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchTopicViewController.swift; sourceTree = "<group>"; };
+		6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchTopicTableViewCell.swift; sourceTree = "<group>"; };
 		6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeSurveyTask.swift; sourceTree = "<group>"; };
 		6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalInformationSurveyTask.swift; sourceTree = "<group>"; };
@@ -125,6 +131,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D27AD0C1B545A04009F91B3 /* SurveyTasks */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D495B1B3C4DAF005C4189 /* MySleepPatternSurveyTask.swift */,
+				6D7D495D1B3C4E34005C4189 /* AboutMyFamilySurveyTask.swift */,
+				6D7D495F1B3C4E60005C4189 /* MySleepQualitySurveyTask.swift */,
+				6D7D49611B3C4E8B005C4189 /* MyHealthConditionsSurveyTask.swift */,
+				6D7D49631B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift */,
+				6D7D49651B3C4EDC005C4189 /* MyQualityOfLifeSurveyTask.swift */,
+				6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */,
+				6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */,
+				6D7D49671B3C4F05005C4189 /* MySleepApneaTreatmentSurveyTask.swift */,
+				6D7D49691B3C4F2A005C4189 /* MySleepApneaSurveyTask.swift */,
+				6D7D496B1B3C4F4B005C4189 /* MyRiskProfileSurveyTask.swift */,
+			);
+			name = SurveyTasks;
+			sourceTree = "<group>";
+		};
+		6D27AD0D1B545A15009F91B3 /* ConsentProcess */ = {
+			isa = PBXGroup;
+			children = (
+				6DDC895A1B3B497F007DD498 /* ConsentDocument.swift */,
+				6DDC895C1B3B49A2007DD498 /* ConsentTask.swift */,
+			);
+			name = ConsentProcess;
+			sourceTree = "<group>";
+		};
+		6D27AD0E1B545A25009F91B3 /* ResearchTopics */ = {
+			isa = PBXGroup;
+			children = (
+				6D27AD041B541CD3009F91B3 /* ResearchTopicTableViewController.swift */,
+				6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */,
+				6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */,
+			);
+			name = ResearchTopics;
+			sourceTree = "<group>";
+		};
+		6D27AD0F1B545A55009F91B3 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */,
+				6DDC892C1B3B41DA007DD498 /* SecondViewController.swift */,
+				6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */,
+			);
+			name = NavigationControllers;
+			sourceTree = "<group>";
+		};
 		6DDC891A1B3B41DA007DD498 = {
 			isa = PBXGroup;
 			children = (
@@ -148,23 +201,11 @@
 			isa = PBXGroup;
 			children = (
 				6DDC89281B3B41DA007DD498 /* AppDelegate.swift */,
-				6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */,
-				6DDC892C1B3B41DA007DD498 /* SecondViewController.swift */,
-				6DDC895A1B3B497F007DD498 /* ConsentDocument.swift */,
-				6D7D495B1B3C4DAF005C4189 /* MySleepPatternSurveyTask.swift */,
-				6D7D495D1B3C4E34005C4189 /* AboutMyFamilySurveyTask.swift */,
-				6D7D495F1B3C4E60005C4189 /* MySleepQualitySurveyTask.swift */,
-				6D7D49611B3C4E8B005C4189 /* MyHealthConditionsSurveyTask.swift */,
-				6D7D49631B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift */,
-				6D7D49651B3C4EDC005C4189 /* MyQualityOfLifeSurveyTask.swift */,
-				6D7D49671B3C4F05005C4189 /* MySleepApneaTreatmentSurveyTask.swift */,
-				6D7D49691B3C4F2A005C4189 /* MySleepApneaSurveyTask.swift */,
-				6D7D496B1B3C4F4B005C4189 /* MyRiskProfileSurveyTask.swift */,
-				6DDC895C1B3B49A2007DD498 /* ConsentTask.swift */,
-				6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */,
-				6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */,
+				6D27AD0F1B545A55009F91B3 /* NavigationControllers */,
+				6D27AD0D1B545A15009F91B3 /* ConsentProcess */,
+				6D27AD0C1B545A04009F91B3 /* SurveyTasks */,
+				6D27AD0E1B545A25009F91B3 /* ResearchTopics */,
 				6DDC892E1B3B41DA007DD498 /* Main.storyboard */,
-				6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */,
 				6DDC89311B3B41DA007DD498 /* Images.xcassets */,
 				6DDC89331B3B41DA007DD498 /* LaunchScreen.xib */,
 				6DDC89261B3B41DA007DD498 /* Supporting Files */,
@@ -331,17 +372,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D27AD071B541CD3009F91B3 /* ResearchTopicViewController.swift in Sources */,
 				6D7D49641B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift in Sources */,
 				6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */,
+				6D27AD061B541CD3009F91B3 /* ResearchTopicTableViewController.swift in Sources */,
 				6D7D496A1B3C4F2A005C4189 /* MySleepApneaSurveyTask.swift in Sources */,
 				6DDC892D1B3B41DA007DD498 /* SecondViewController.swift in Sources */,
 				6D7D495E1B3C4E34005C4189 /* AboutMyFamilySurveyTask.swift in Sources */,
 				6DDC895B1B3B497F007DD498 /* ConsentDocument.swift in Sources */,
+				6D27AD0B1B542445009F91B3 /* ResearchTopicTableViewCell.swift in Sources */,
 				6D7D49661B3C4EDC005C4189 /* MyQualityOfLifeSurveyTask.swift in Sources */,
-				6D2804A61B42F657001B36A4 /* ResearchTopicViewController.swift in Sources */,
 				6D7D49601B3C4E60005C4189 /* MySleepQualitySurveyTask.swift in Sources */,
 				6DDC895D1B3B49A2007DD498 /* ConsentTask.swift in Sources */,
-				6D2804A21B42E72A001B36A4 /* ResearchTopicTableViewController.swift in Sources */,
 				6D7D496C1B3C4F4B005C4189 /* MyRiskProfileSurveyTask.swift in Sources */,
 				6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */,
 				6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */,
