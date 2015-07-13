@@ -56,8 +56,15 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let forumName:String = userDefaults.objectForKey("forumName")! as! String
+        if !forumName.isEmpty {
+            segueToTabbedController()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +104,7 @@ class LoginViewController: UIViewController {
                 if let parseJSON = json {
                     var success = parseJSON["success"] as? Int
                     println("Success: \(success)")
+                    // Save relevant information to NSUserDefaults
                     var forumName = parseJSON["forum_name"] as? String
                     if forumName != nil {
                         let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -111,8 +119,13 @@ class LoginViewController: UIViewController {
             
         })
         task.resume()
+        // Transition to main application
+        segueToTabbedController()
     }
     
+    func segueToTabbedController() {
+        self.performSegueWithIdentifier("continueToTabbedApplication", sender: self)
+    }
 
     /*
     // MARK: - Navigation

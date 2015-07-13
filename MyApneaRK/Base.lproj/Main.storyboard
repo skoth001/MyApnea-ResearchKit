@@ -118,7 +118,7 @@
                                     <constraint firstAttribute="width" constant="201" id="hPk-Zr-85H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3g-Hs-xVk">
                                 <rect key="frame" x="271" y="429" width="59" height="30"/>
@@ -211,6 +211,7 @@
                         <outlet property="secondaryActionButton" destination="JIF-GX-I1i" id="47h-Bm-Ifi"/>
                         <outlet property="secondaryActionLabel" destination="D9L-oA-N1H" id="hNv-lK-z5T"/>
                         <outlet property="usernameTextField" destination="7Vo-AP-AJy" id="WuT-CB-fTg"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="continueToTabbedApplication" id="bfa-YJ-U3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6y-IA-o0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
