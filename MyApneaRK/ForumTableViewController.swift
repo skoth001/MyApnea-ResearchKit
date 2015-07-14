@@ -12,6 +12,7 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
     
     var forumTopics:NSArray = [NSDictionary]()
     var topicSelectedId = Int()
+    var topicSelectedName = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,7 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
         
         let topic = forumTopics[indexPath.row] as! NSDictionary
         self.topicSelectedId = topic.valueForKey("id") as! Int
+        self.topicSelectedName = topic.valueForKey("name") as! String
         self.performSegueWithIdentifier("showTopicSegue", sender: nil)
         
     }
@@ -132,6 +134,7 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
         if segue.identifier == "showTopicSegue" {
             let destination = segue.destinationViewController as! TopicShowTableViewController
             destination.topicId = self.topicSelectedId as Int
+            destination.title = self.topicSelectedName
             
         }
     }
