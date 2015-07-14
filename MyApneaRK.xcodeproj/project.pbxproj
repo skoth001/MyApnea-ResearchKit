@@ -11,8 +11,8 @@
 		6D27AD071B541CD3009F91B3 /* ResearchTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */; };
 		6D27AD0B1B542445009F91B3 /* ResearchTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */; };
 		6D27AD111B557B7A009F91B3 /* ForumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD101B557B7A009F91B3 /* ForumTableViewController.swift */; };
-		6D27AD131B557DB5009F91B3 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD121B557DB5009F91B3 /* TopicViewController.swift */; };
 		6D27AD161B558995009F91B3 /* TopicShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD151B558995009F91B3 /* TopicShowTableViewController.swift */; };
+		6D27AD181B558F9D009F91B3 /* TopicPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */; };
 		6D4268C31B50BC0D00AE3A83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */; };
 		6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */; };
 		6D7D495A1B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */; };
@@ -88,8 +88,8 @@
 		6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchTopicViewController.swift; sourceTree = "<group>"; };
 		6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchTopicTableViewCell.swift; sourceTree = "<group>"; };
 		6D27AD101B557B7A009F91B3 /* ForumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumTableViewController.swift; sourceTree = "<group>"; };
-		6D27AD121B557DB5009F91B3 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		6D27AD151B558995009F91B3 /* TopicShowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicShowTableViewController.swift; sourceTree = "<group>"; };
+		6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicPostTableViewCell.swift; sourceTree = "<group>"; };
 		6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeSurveyTask.swift; sourceTree = "<group>"; };
 		6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalInformationSurveyTask.swift; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				6D27AD041B541CD3009F91B3 /* ResearchTopicTableViewController.swift */,
-				6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */,
 				6D27AD0A1B542445009F91B3 /* ResearchTopicTableViewCell.swift */,
+				6D27AD051B541CD3009F91B3 /* ResearchTopicViewController.swift */,
 			);
 			name = ResearchTopics;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			children = (
 				6D27AD101B557B7A009F91B3 /* ForumTableViewController.swift */,
 				6D27AD151B558995009F91B3 /* TopicShowTableViewController.swift */,
-				6D27AD121B557DB5009F91B3 /* TopicViewController.swift */,
+				6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */,
 			);
 			name = Forums;
 			sourceTree = "<group>";
@@ -390,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D27AD071B541CD3009F91B3 /* ResearchTopicViewController.swift in Sources */,
+				6D27AD181B558F9D009F91B3 /* TopicPostTableViewCell.swift in Sources */,
 				6D7D49641B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift in Sources */,
 				6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */,
 				6D27AD161B558995009F91B3 /* TopicShowTableViewController.swift in Sources */,
@@ -400,7 +401,6 @@
 				6DDC895B1B3B497F007DD498 /* ConsentDocument.swift in Sources */,
 				6D27AD0B1B542445009F91B3 /* ResearchTopicTableViewCell.swift in Sources */,
 				6D7D49661B3C4EDC005C4189 /* MyQualityOfLifeSurveyTask.swift in Sources */,
-				6D27AD131B557DB5009F91B3 /* TopicViewController.swift in Sources */,
 				6D7D49601B3C4E60005C4189 /* MySleepQualitySurveyTask.swift in Sources */,
 				6DDC895D1B3B49A2007DD498 /* ConsentTask.swift in Sources */,
 				6D7D496C1B3C4F4B005C4189 /* MyRiskProfileSurveyTask.swift in Sources */,

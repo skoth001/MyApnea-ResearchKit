@@ -17,6 +17,8 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 100.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         
         // Get topic from API
         println(topicId)
@@ -66,8 +68,10 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel!.text = posts[indexPath.row].valueForKey("description") as? String
+        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! TopicPostTableViewCell
+        cell.usernameLabel.text = posts[indexPath.row].valueForKey("user") as? String
+        cell.postDescriptionLabel?.text = posts[indexPath.row].valueForKey("description") as? String
+        cell.postDescriptionLabel.sizeToFit()
         return cell
     }
     

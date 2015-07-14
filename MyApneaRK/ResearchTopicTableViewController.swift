@@ -75,7 +75,7 @@ class ResearchTopicTableViewController: UITableViewController, UITableViewDelega
                     destination.researchTopicRating = researchTopics[researchTopicIndex].valueForKey("endorsement") as! Float
                     destination.researchTopicVoteCount = researchTopics[researchTopicIndex].valueForKey("votes") as! Int
                     destination.researchTopicId = researchTopics[researchTopicIndex].valueForKey("id") as! Int
-                    destination.userHasVoted = self.votePresentForResearchTopic
+//                    destination.userHasVoted = self.votePresentForResearchTopic
                 }
             }
         } else if segue.identifier == "dummySegue" {
