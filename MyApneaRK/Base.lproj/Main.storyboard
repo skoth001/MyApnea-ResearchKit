@@ -233,11 +233,12 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="UAH-Zz-Kwv" kind="relationship" relationship="viewControllers" id="BkF-6v-Uor"/>
                         <segue destination="ysq-2H-0Tt" kind="relationship" relationship="viewControllers" id="a0U-xu-1RF"/>
+                        <segue destination="Bcb-4O-xS8" kind="relationship" relationship="viewControllers" id="i23-xe-2Ja"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-116" y="804"/>
         </scene>
         <!--Surveys-->
         <scene sceneID="118-XW-9cY">
@@ -458,6 +459,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GD7-wO-VOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="1155"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="lx2-na-NIx">
+            <objects>
+                <tableViewController id="Joz-Tc-ENW" customClass="ForumTableViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dkg-yI-F1G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" id="G4z-RG-xIW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G4z-RG-xIW" id="5Zr-tC-2R4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Joz-Tc-ENW" id="cTN-fk-dMZ"/>
+                            <outlet property="delegate" destination="Joz-Tc-ENW" id="CTu-XH-lxU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="HC4-4i-oUQ"/>
+                    <connections>
+                        <segue destination="eq2-6E-DPG" kind="show" identifier="topicShowSegue" id="axq-Hh-JiI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMm-MF-ztL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="1892"/>
+        </scene>
+        <!--Topic View Controller-->
+        <scene sceneID="5lL-bN-V1N">
+            <objects>
+                <viewController id="eq2-6E-DPG" customClass="TopicViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ByY-kE-nYC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kyw-sX-Bcq"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="IUJ-4c-jdb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created by:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTj-Qs-RPv">
+                                <rect key="frame" x="279" y="71" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of posts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-0v-p33">
+                                <rect key="frame" x="279" y="126" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First post:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kt-Vr-PXi">
+                                <rect key="frame" x="279" y="191" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="n8l-0v-p33" firstAttribute="leading" secondItem="IUJ-4c-jdb" secondAttribute="leadingMargin" id="0D5-2m-Ohv"/>
+                            <constraint firstItem="BTj-Qs-RPv" firstAttribute="leading" secondItem="IUJ-4c-jdb" secondAttribute="leadingMargin" id="5XH-Sz-gqs"/>
+                            <constraint firstItem="BTj-Qs-RPv" firstAttribute="top" secondItem="ByY-kE-nYC" secondAttribute="bottom" constant="10" id="9Nv-Ci-hxo"/>
+                            <constraint firstItem="4kt-Vr-PXi" firstAttribute="leading" secondItem="IUJ-4c-jdb" secondAttribute="leadingMargin" id="EYJ-I4-dxg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4kt-Vr-PXi" secondAttribute="trailing" id="MaD-yg-bRi"/>
+                            <constraint firstItem="n8l-0v-p33" firstAttribute="top" secondItem="BTj-Qs-RPv" secondAttribute="bottom" constant="10" id="VEZ-x2-emd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BTj-Qs-RPv" secondAttribute="trailing" id="aMA-xO-UBN"/>
+                            <constraint firstItem="4kt-Vr-PXi" firstAttribute="top" secondItem="n8l-0v-p33" secondAttribute="bottom" constant="10" id="jiM-IS-I9G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n8l-0v-p33" secondAttribute="trailing" id="zcX-yr-hEK"/>
+                        </constraints>
+                    </scrollView>
+                    <connections>
+                        <outlet property="createdByLabel" destination="BTj-Qs-RPv" id="dyl-ae-psX"/>
+                        <outlet property="firstPostLabel" destination="4kt-Vr-PXi" id="kOT-Gt-e38"/>
+                        <outlet property="numberPostsLabel" destination="n8l-0v-p33" id="nbZ-DK-VqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nl-eR-hbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320" y="1894"/>
+        </scene>
+        <!--Discussions-->
+        <scene sceneID="acB-SV-0V2">
+            <objects>
+                <navigationController id="Bcb-4O-xS8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Discussions" image="first" id="0dd-8v-rbC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkI-Lp-IYH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Joz-Tc-ENW" kind="relationship" relationship="rootViewController" id="EBE-3q-8iH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yA8-C8-FcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="1892"/>
         </scene>
     </scenes>
     <resources>
