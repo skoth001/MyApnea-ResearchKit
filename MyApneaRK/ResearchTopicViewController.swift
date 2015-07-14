@@ -46,10 +46,16 @@ class ResearchTopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultsView.hidden = true
         titleLabel.text = researchTopicTitle
         descriptionLabel.text = researchTopicDescription
-        println(userHasVoted)
+        if userHasVoted {
+            resultsView.hidden = false
+            votingView.hidden = true
+            updateEndorsementValue(researchTopicRating)
+        } else {
+            resultsView.hidden = true
+            votingView.hidden = false
+        }
     }
     
     func updateEndorsementValue(value: Float) -> Void {

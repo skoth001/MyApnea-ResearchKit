@@ -307,30 +307,11 @@
                     <navigationItem key="navigationItem" id="pUP-we-Zgk"/>
                     <connections>
                         <segue destination="qO9-Tv-aPD" kind="show" identifier="ShowResearchTopicSegue" id="JHH-9V-aKh"/>
-                        <segue destination="MEM-of-RYn" kind="show" identifier="dummySegue" id="H3q-QY-tN7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEj-nu-gmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1646" y="1155"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="XZX-t7-u0f">
-            <objects>
-                <viewController id="MEM-of-RYn" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bde-zY-HrM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hxk-za-qiI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ylI-Za-3cX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MYZ-uF-r9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2329" y="434"/>
         </scene>
         <!--Research Topic View Controller-->
         <scene sceneID="nII-tc-z3A">
@@ -360,7 +341,7 @@
                                 <rect key="frame" x="32" y="250" width="300" height="148"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B68-DS-fhH">
-                                        <rect key="frame" x="47" y="98" width="47" height="30"/>
+                                        <rect key="frame" x="47" y="61" width="47" height="30"/>
                                         <state key="normal" title="I agree">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -369,7 +350,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSl-uA-0qc">
-                                        <rect key="frame" x="204" y="98" width="67" height="30"/>
+                                        <rect key="frame" x="204" y="61" width="67" height="30"/>
                                         <state key="normal" title="I disagree">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -438,11 +419,11 @@
                             <constraint firstItem="8gE-0U-ZSQ" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="20" id="ETv-77-7fP"/>
                             <constraint firstItem="8gE-0U-ZSQ" firstAttribute="top" secondItem="js6-w1-FTY" secondAttribute="bottom" constant="65" id="N8P-6Q-mRz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8gE-0U-ZSQ" secondAttribute="trailing" constant="20" id="Nlu-lz-Gdq"/>
-                            <constraint firstItem="cJM-36-b2Q" firstAttribute="top" secondItem="2BQ-xJ-ukd" secondAttribute="bottom" constant="40" id="XVj-PV-CGb"/>
+                            <constraint firstItem="cJM-36-b2Q" firstAttribute="top" secondItem="2BQ-xJ-ukd" secondAttribute="bottom" constant="10" id="XVj-PV-CGb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cJM-36-b2Q" secondAttribute="trailing" constant="40" id="Z7j-Yc-HcH"/>
                             <constraint firstItem="cJM-36-b2Q" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="h69-7q-Bvm"/>
-                            <constraint firstItem="js6-w1-FTY" firstAttribute="top" secondItem="cJM-36-b2Q" secondAttribute="bottom" constant="40" id="hBW-Wt-9dy"/>
-                            <constraint firstItem="mj4-Sc-WOG" firstAttribute="top" secondItem="js6-w1-FTY" secondAttribute="bottom" constant="44" id="lfg-LS-Xu1"/>
+                            <constraint firstItem="js6-w1-FTY" firstAttribute="top" secondItem="cJM-36-b2Q" secondAttribute="bottom" constant="10" id="hBW-Wt-9dy"/>
+                            <constraint firstItem="mj4-Sc-WOG" firstAttribute="top" secondItem="js6-w1-FTY" secondAttribute="bottom" constant="20" id="lfg-LS-Xu1"/>
                             <constraint firstItem="js6-w1-FTY" firstAttribute="leading" secondItem="VOT-52-qqb" secondAttribute="leadingMargin" constant="40" id="rl0-S7-Vr9"/>
                         </constraints>
                     </view>
