@@ -49,6 +49,7 @@ class ResearchTopicViewController: UIViewController {
         resultsView.hidden = true
         titleLabel.text = researchTopicTitle
         descriptionLabel.text = researchTopicDescription
+        println(userHasVoted)
     }
     
     func updateEndorsementValue(value: Float) -> Void {

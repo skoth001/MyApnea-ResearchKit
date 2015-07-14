@@ -12,6 +12,7 @@ class ResearchTopicTableViewController: UITableViewController, UITableViewDelega
     
     var researchTopics:NSArray = [NSDictionary]()
     let researchTopicSegueIdentifier = "ShowResearchTopicSegue"
+    var votePresentForResearchTopic = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,46 +74,62 @@ class ResearchTopicTableViewController: UITableViewController, UITableViewDelega
                     destination.researchTopicDescription = researchTopics[researchTopicIndex].valueForKey("description") as! String
                     destination.researchTopicRating = researchTopics[researchTopicIndex].valueForKey("endorsement") as! Float
                     destination.researchTopicVoteCount = researchTopics[researchTopicIndex].valueForKey("votes") as! Int
-                    let researchTopicId = researchTopics[researchTopicIndex].valueForKey("id") as! Int
-                    destination.researchTopicId = researchTopicId
-                    
-                    // Retrieve votes for research topic and user
-                    let user = NSUserDefaults.standardUserDefaults().objectForKey("forumName") as! String
-                    let url = NSURL(string: "https://staging.partners.org/myapnea.org/api/research-topics/votes.json?research_topic_id=\(researchTopicId)&user=\(user)")
-                    println(url)
-                    let session = NSURLSession.sharedSession()
-                    let request = NSURLRequest(URL: url!)
-                    let task = session.dataTaskWithURL(url!, completionHandler: {
-                        (data, response, error) -> Void in
-                        if (error != nil) {
-                            println(error)
-                        } else {
-                            let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-                            if let votes = jsonResult.valueForKey("votes") as? NSArray {
-                                println(votes)
-                                if votes.count == 1 {
-                                    println("vote found")
-                                    destination.userHasVoted = true
-                                } else {
-                                    println("vote not found")
-                                    destination.userHasVoted = false
-                                }
-                            } else {
-                                println("vote not found or votes not correctly set")
-                                destination.userHasVoted = false
-                            }
-                        }
-                        
-                    })
-                    task.resume()
+                    destination.researchTopicId = researchTopics[researchTopicIndex].valueForKey("id") as! Int
+                    destination.userHasVoted = self.votePresentForResearchTopic
                 }
             }
+        } else if segue.identifier == "dummySegue" {
+            println("dummy segue")
         }
+        println("preparation complete")
     }
+    
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("segue to research topic")
+            
+        if let researchTopicIndex = tableView.indexPathForSelectedRow()?.row {
+            
+            // Prepare variables for data task
+            let researchTopicId = self.researchTopics[researchTopicIndex].valueForKey("id") as! Int
+            let user = NSUserDefaults.standardUserDefaults().objectForKey("forumName") as! String
+            let url = NSURL(string: "https://staging.partners.org/myapnea.org/api/research-topics/votes.json?research_topic_id=\(researchTopicId)&user=\(user)")
+            let session = NSURLSession.sharedSession()
+            let request = NSURLRequest(URL: url!)
+            
+            // Retrieve votes for research topic and user with data task
+            let task = session.dataTaskWithURL(url!, completionHandler: {
+                (data, response, error) -> Void in
+                if (error != nil) {
+                    println(error)
+                } else {
+                    let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                    if let votes = jsonResult.valueForKey("votes") as? NSArray {
+                        if votes.count == 1 {
+                            println("vote found")
+                            self.votePresentForResearchTopic = true
+                        } else {
+                            println("vote not found")
+                            self.votePresentForResearchTopic = false
+                        }
+                    } else {
+                        println("vote not found or votes not correctly set")
+                        self.votePresentForResearchTopic = false
+                    }
+                }
+                
+                // Send signal for seguein main thread
+                println("sending signal to perform segue")
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    println("sending asynchronously")
+                    self.performSegueWithIdentifier(self.researchTopicSegueIdentifier, sender: nil)
+                })
+                
+            })
+            task.resume()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -296,7 +296,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="ResearchTopicTextLabel" destination="5Lc-cC-saN" id="jJR-va-dmi"/>
-                                    <segue destination="qO9-Tv-aPD" kind="show" identifier="ShowResearchTopicSegue" id="0de-uf-hCx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -306,10 +305,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pUP-we-Zgk"/>
+                    <connections>
+                        <segue destination="qO9-Tv-aPD" kind="show" identifier="ShowResearchTopicSegue" id="JHH-9V-aKh"/>
+                        <segue destination="MEM-of-RYn" kind="show" identifier="dummySegue" id="H3q-QY-tN7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEj-nu-gmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="1155"/>
+            <point key="canvasLocation" x="1646" y="1155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XZX-t7-u0f">
+            <objects>
+                <viewController id="MEM-of-RYn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bde-zY-HrM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hxk-za-qiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ylI-Za-3cX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYZ-uF-r9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="434"/>
         </scene>
         <!--Research Topic View Controller-->
         <scene sceneID="nII-tc-z3A">
