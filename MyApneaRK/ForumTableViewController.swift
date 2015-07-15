@@ -13,21 +13,11 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
     var forumTopics:NSArray = [NSDictionary]()
     var topicSelectedId = Int()
     var topicSelectedName = String()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Initialize table view
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        // Retrieve forum data
+    
+    // Refresh data
+    var refresher = UIRefreshControl()
+    func refresh() {
+        println("refreshing topic index")
         let url = NSURL(string: "https://staging.partners.org/myapnea.org/api/forums/topics.json")
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: url!)
@@ -44,12 +34,34 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
                     self.tableView.setNeedsLayout()
                     self.tableView.layoutIfNeeded()
                     self.tableView.reloadData()
+                    self.refresher.endRefreshing()
                 })
             }
             
         })
         
         task.resume()
+    
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Initialize table view
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.title = "Discussions"
+
+        // Establish refresh gesture recognizer
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // Retrieve forum data
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {

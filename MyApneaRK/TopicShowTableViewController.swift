@@ -13,15 +13,10 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
     var topicId = Int()
     var posts = NSArray()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.estimatedRowHeight = 100.0
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        
-        // Get topic from API
-        println(topicId)
+    // Ability to refresh on pull
+    var refresher = UIRefreshControl()
+    func refresh() {
+        println("refreshing topic show table")
         let url = NSURL(string: "https://staging.partners.org/myapnea.org/api/forums/topics/\(topicId).json")
         let session = NSURLSession.sharedSession()
         let request = NSURLRequest(URL: url!)
@@ -38,13 +33,37 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
                     self.tableView.setNeedsLayout()
                     self.tableView.layoutIfNeeded()
                     self.tableView.reloadData()
+                    self.refresher.endRefreshing()
                 })
             }
             
         })
         
         task.resume()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        // Initialize table
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 100.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Get topic from API
+        println(topicId)
+        
+        // Establish refresh gesture recognizer
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refresher)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // Load data
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {

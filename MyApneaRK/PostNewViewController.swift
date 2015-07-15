@@ -18,7 +18,7 @@ class PostNewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println("loaded reply controller")
         // Do any additional setup after loading the view.
     }
 
@@ -79,7 +79,7 @@ class PostNewViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.navigationController?.popViewControllerAnimated(true)
             })
             
         })
