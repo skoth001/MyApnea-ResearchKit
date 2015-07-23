@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="ic0-4Y-jWC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="icon-dashboard-active" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,7 +403,7 @@
                             <outlet property="delegate" destination="UAH-Zz-Kwv" id="nJm-MB-q5G"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Surveys" image="second" id="71L-q0-4Sj"/>
+                    <tabBarItem key="tabBarItem" title="Surveys" image="icon-surveys-active" id="71L-q0-4Sj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHt-qH-vzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,7 +587,7 @@
         <scene sceneID="BX9-VW-mVZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ysq-2H-0Tt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Research Topics" image="second" id="wlb-Mw-guh"/>
+                    <tabBarItem key="tabBarItem" title="Research Topics" image="icon-research-active" id="wlb-Mw-guh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjJ-ce-AGS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -835,7 +835,7 @@
         <scene sceneID="acB-SV-0V2">
             <objects>
                 <navigationController id="Bcb-4O-xS8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discussions" image="first" id="0dd-8v-rbC"/>
+                    <tabBarItem key="tabBarItem" title="Discussions" image="icon-discussion-active" id="0dd-8v-rbC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkI-Lp-IYH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -870,8 +870,10 @@
     <resources>
         <image name="MyApneaLogo_border_whitetext" width="2490" height="668"/>
         <image name="appIcon" width="1024" height="1024"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="icon-dashboard-active" width="36" height="28"/>
+        <image name="icon-discussion-active" width="29" height="25"/>
+        <image name="icon-research-active" width="26" height="27"/>
+        <image name="icon-surveys-active" width="23" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NlU-Lr-Zcq"/>
