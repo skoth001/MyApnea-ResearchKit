@@ -23,10 +23,19 @@ class InitialViewController: UIViewController, UIPageViewControllerDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if pageTitles.count > 0 {
             createWelcomePageViewController()
             setupPageControl()
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let forumName = userDefaults.objectForKey("forumName") as? String {
+            if !forumName.isEmpty {
+                segueToTabbedController()
+            }
         }
     }
     
@@ -137,6 +146,10 @@ class InitialViewController: UIViewController, UIPageViewControllerDelegate, UIP
         self.performSegueWithIdentifier("segueToSignup", sender: self)
     }
     func segueToLogin() {
-        self.performSegueWithIdentifier("segueToSignup", sender: self)
+        self.performSegueWithIdentifier("segueToLogin", sender: self)
+    }
+    
+    func segueToTabbedController() {
+        self.performSegueWithIdentifier("segueToTabbedAppFromInit", sender: nil)
     }
 }

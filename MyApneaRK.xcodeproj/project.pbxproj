@@ -15,7 +15,7 @@
 		6D27AD181B558F9D009F91B3 /* TopicPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */; };
 		6D27AD1A1B559E18009F91B3 /* TopicNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27AD191B559E18009F91B3 /* TopicNewViewController.swift */; };
 		6D4122071B55ACBC00562C88 /* PostNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4122061B55ACBC00562C88 /* PostNewViewController.swift */; };
-		6D4268C31B50BC0D00AE3A83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */; };
+		6D4268C31B50BC0D00AE3A83 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4268C21B50BC0D00AE3A83 /* SignUpViewController.swift */; };
 		6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */; };
 		6D7D495A1B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */; };
 		6D7D495C1B3C4DAF005C4189 /* MySleepPatternSurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D495B1B3C4DAF005C4189 /* MySleepPatternSurveyTask.swift */; };
@@ -30,6 +30,7 @@
 		6DBF3ACC1B61384A00094C91 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3ACB1B61384A00094C91 /* InitialViewController.swift */; };
 		6DBF3AD01B61396B00094C91 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3ACF1B61396B00094C91 /* WelcomePageViewController.swift */; };
 		6DBF3AD21B61398800094C91 /* WelcomeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3AD11B61398800094C91 /* WelcomeItemViewController.swift */; };
+		6DBF3AD51B6163FB00094C91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3AD41B6163FB00094C91 /* LoginViewController.swift */; };
 		6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC89281B3B41DA007DD498 /* AppDelegate.swift */; };
 		6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */; };
 		6DDC892D1B3B41DA007DD498 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC892C1B3B41DA007DD498 /* SecondViewController.swift */; };
@@ -97,7 +98,7 @@
 		6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicPostTableViewCell.swift; sourceTree = "<group>"; };
 		6D27AD191B559E18009F91B3 /* TopicNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicNewViewController.swift; sourceTree = "<group>"; };
 		6D4122061B55ACBC00562C88 /* PostNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNewViewController.swift; sourceTree = "<group>"; };
-		6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6D4268C21B50BC0D00AE3A83 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D7D49551B3C3F5C005C4189 /* AboutMeSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeSurveyTask.swift; sourceTree = "<group>"; };
 		6D7D49591B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalInformationSurveyTask.swift; sourceTree = "<group>"; };
 		6D7D495B1B3C4DAF005C4189 /* MySleepPatternSurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySleepPatternSurveyTask.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		6DBF3ACB1B61384A00094C91 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		6DBF3ACF1B61396B00094C91 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		6DBF3AD11B61398800094C91 /* WelcomeItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeItemViewController.swift; sourceTree = "<group>"; };
+		6DBF3AD41B6163FB00094C91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DDC89231B3B41DA007DD498 /* MyApneaRK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApneaRK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDC89271B3B41DA007DD498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DDC89281B3B41DA007DD498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,14 +186,13 @@
 			name = ResearchTopics;
 			sourceTree = "<group>";
 		};
-		6D27AD0F1B545A55009F91B3 /* NavigationControllers */ = {
+		6D27AD0F1B545A55009F91B3 /* Surveys */ = {
 			isa = PBXGroup;
 			children = (
-				6D4268C21B50BC0D00AE3A83 /* LoginViewController.swift */,
 				6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */,
 				6DDC892C1B3B41DA007DD498 /* SecondViewController.swift */,
 			);
-			name = NavigationControllers;
+			name = Surveys;
 			sourceTree = "<group>";
 		};
 		6D27AD141B557DC0009F91B3 /* Forums */ = {
@@ -214,6 +215,15 @@
 				6DBF3AD11B61398800094C91 /* WelcomeItemViewController.swift */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		6DBF3AD61B61642000094C91 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				6D4268C21B50BC0D00AE3A83 /* SignUpViewController.swift */,
+				6DBF3AD41B6163FB00094C91 /* LoginViewController.swift */,
+			);
+			name = Registration;
 			sourceTree = "<group>";
 		};
 		6DDC891A1B3B41DA007DD498 = {
@@ -240,7 +250,8 @@
 			children = (
 				6DDC89281B3B41DA007DD498 /* AppDelegate.swift */,
 				6DBF3AD31B613A0F00094C91 /* Welcome */,
-				6D27AD0F1B545A55009F91B3 /* NavigationControllers */,
+				6DBF3AD61B61642000094C91 /* Registration */,
+				6D27AD0F1B545A55009F91B3 /* Surveys */,
 				6D27AD0D1B545A15009F91B3 /* ConsentProcess */,
 				6D27AD0C1B545A04009F91B3 /* SurveyTasks */,
 				6D27AD0E1B545A25009F91B3 /* ResearchTopics */,
@@ -418,6 +429,7 @@
 				6D27AD181B558F9D009F91B3 /* TopicPostTableViewCell.swift in Sources */,
 				6D7D49641B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift in Sources */,
 				6DBF3AD01B61396B00094C91 /* WelcomePageViewController.swift in Sources */,
+				6DBF3AD51B6163FB00094C91 /* LoginViewController.swift in Sources */,
 				6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */,
 				6D27AD161B558995009F91B3 /* TopicShowTableViewController.swift in Sources */,
 				6D27AD061B541CD3009F91B3 /* ResearchTopicTableViewController.swift in Sources */,
@@ -433,7 +445,7 @@
 				6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */,
 				6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */,
 				6D7D49621B3C4E8B005C4189 /* MyHealthConditionsSurveyTask.swift in Sources */,
-				6D4268C31B50BC0D00AE3A83 /* LoginViewController.swift in Sources */,
+				6D4268C31B50BC0D00AE3A83 /* SignUpViewController.swift in Sources */,
 				6D7D49681B3C4F05005C4189 /* MySleepApneaTreatmentSurveyTask.swift in Sources */,
 				6D27AD111B557B7A009F91B3 /* ForumTableViewController.swift in Sources */,
 				6D7D495A1B3C40CD005C4189 /* AdditionalInformationSurveyTask.swift in Sources */,

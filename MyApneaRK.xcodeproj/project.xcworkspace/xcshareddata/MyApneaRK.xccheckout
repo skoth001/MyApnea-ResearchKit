@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A5C1C174-E449-4769-91EF-611C57DB0756</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyApneaRK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5F29B61CA7C3425134EC39EE13C6CF1C59944A60</key>
+		<string>github.com:myapnea/MyApnea-ResearchKit.git</string>
+		<key>9CF6181E3789E3853840089C16D4B9FDDB9B31E2</key>
+		<string>github.com:ResearchKit/ResearchKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyApneaRK.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5F29B61CA7C3425134EC39EE13C6CF1C59944A60</key>
+		<string>../..</string>
+		<key>9CF6181E3789E3853840089C16D4B9FDDB9B31E2</key>
+		<string>../../../ResearchKit</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:myapnea/MyApnea-ResearchKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5F29B61CA7C3425134EC39EE13C6CF1C59944A60</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5F29B61CA7C3425134EC39EE13C6CF1C59944A60</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyApneaRK</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9CF6181E3789E3853840089C16D4B9FDDB9B31E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ResearchKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

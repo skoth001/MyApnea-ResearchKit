@@ -2,42 +2,56 @@
 //  LoginViewController.swift
 //  MyApneaRK
 //
-//  Created by Kyle Rand on 7/23/15.
+//  Created by Kyle Rand on 7/10/15.
 //  Copyright (c) 2015 myapnea. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
-    
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+    // Form elements
 
-    @IBAction func loginButtonPressed(sender: AnyObject) {
-        var urlString = "https://staging.partners.org/myapnea.org/login"
-        var params = ["user":["email":emailTextField.text, "password":passwordTextField.text]]
+    @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet var lastNameTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+
+    @IBOutlet var primaryActionButton: UIButton!
+    @IBOutlet var returnButton: UIButton!
+
+    
+    @IBAction func primaryActionSelected(sender: AnyObject) {
+        var urlString = "https://staging.partners.org/myapnea.org"
+        var params = ["user":["email":usernameTextField.text, "password":passwordTextField.text, "first_name":firstNameTextField.text, "last_name":lastNameTextField.text, "over_eighteen":"true"]]
         loginFromView(params, urlString: urlString)
     }
     
     @IBAction func returnButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Establish view
         let colorTop = UIColor(red: 35.0/255.0, green: 48.0/255.0, blue: 101.0/255.0, alpha: 1.0).CGColor
         let colorBottom = UIColor(red: 16.0/255.0, green: 104.0/255.0, blue: 199.0/255.0, alpha: 1.0).CGColor
-        
+
         let gradient:CAGradientLayer = CAGradientLayer()
         gradient.colors = [colorTop, colorBottom]
         gradient.locations = [0.0, 1.0]
         gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         self.view.layer.insertSublayer(gradient, atIndex: 0)
-        
-        self.loginButton.layer.cornerRadius = 7
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let forumName = userDefaults.objectForKey("forumName") as? String {
+            if !forumName.isEmpty {
+                segueToTabbedController()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +59,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    // MARK: - Control keyboard
+    // Control keyboard
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
@@ -57,7 +70,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    // MARK: - Login
+    // Login
     func loginFromView(params: NSDictionary, urlString: String) {
         var request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         var session = NSURLSession.sharedSession()
@@ -110,6 +123,17 @@ class LoginViewController: UIViewController {
     }
     
     func segueToTabbedController() {
-        self.performSegueWithIdentifier("segueToTabbedAppFromLogin", sender: self)
+        self.performSegueWithIdentifier("segueToTabbedAppFromSignUp", sender: self)
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
