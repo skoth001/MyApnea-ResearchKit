@@ -62,6 +62,8 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
     override func viewWillAppear(animated: Bool) {
         // Retrieve forum data
         refresh()
+        configureTableView()
+        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,9 +87,24 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell", forIndexPath: indexPath) as! TopicTableViewCell
         let topic = forumTopics[indexPath.row] as! NSDictionary
-        cell.textLabel!.text = topic.valueForKey("name") as? String
+        
+        // Set clear background color
+        cell.backgroundColor = UIColor.clearColor()
+        let selectedView = UIView()
+        selectedView.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+        cell.selectedBackgroundView = selectedView
+        
+        // Set content
+        cell.titleLabel.text = topic.valueForKey("name") as? String
+        cell.titleLabel.textColor = UIColor(red: 89.0/255.0, green: 153.0/255.0, blue: 222.0/255.0, alpha: 1.0)
+        cell.subtitlelabel.text = "Yesterday"
+        cell.userImageView.layer.cornerRadius = CGFloat(20)
+        cell.userImageView.clipsToBounds = true
+        
+        // Set text background
+        cell.topicTextView.layer.cornerRadius = 3
         return cell
     }
 
@@ -149,6 +166,20 @@ class ForumTableViewController: UITableViewController, UITableViewDelegate, UITa
             destination.title = self.topicSelectedName
             
         }
+    }
+    
+    // MARK: - TableViewCell
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 84.0
+    }
+    
+    func refreshData() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
+        })
     }
     
 

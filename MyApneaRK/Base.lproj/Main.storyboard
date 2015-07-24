@@ -615,16 +615,68 @@
         <scene sceneID="lx2-na-NIx">
             <objects>
                 <tableViewController id="Joz-Tc-ENW" customClass="ForumTableViewController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dkg-yI-F1G">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dkg-yI-F1G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" id="G4z-RG-xIW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCell" rowHeight="84" id="G4z-RG-xIW" customClass="TopicTableViewCell" customModule="MyApneaRK" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G4z-RG-xIW" id="5Zr-tC-2R4">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-cH-Had">
+                                            <rect key="frame" x="60" y="10" width="530" height="64"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oac-hB-FMa">
+                                                    <rect key="frame" x="5" y="5" width="200" height="25"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho9-5Z-ftf">
+                                                    <rect key="frame" x="5" y="35" width="220" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Oac-hB-FMa" secondAttribute="trailing" constant="5" id="1gx-cB-lNp"/>
+                                                <constraint firstItem="Ho9-5Z-ftf" firstAttribute="leading" secondItem="pvM-cH-Had" secondAttribute="leading" constant="5" id="2Td-wX-Ygr"/>
+                                                <constraint firstItem="Ho9-5Z-ftf" firstAttribute="top" secondItem="Oac-hB-FMa" secondAttribute="bottom" constant="5" id="KXD-Zt-CTy"/>
+                                                <constraint firstItem="Oac-hB-FMa" firstAttribute="leading" secondItem="pvM-cH-Had" secondAttribute="leading" constant="5" id="OUb-OU-mF1"/>
+                                                <constraint firstItem="Oac-hB-FMa" firstAttribute="top" secondItem="pvM-cH-Had" secondAttribute="top" constant="5" id="abd-rk-8Vu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ho9-5Z-ftf" secondAttribute="bottom" constant="5" id="gSy-Nj-Sd1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ho9-5Z-ftf" secondAttribute="trailing" constant="5" id="uIv-kt-hU1"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user" translatesAutoresizingMaskIntoConstraints="NO" id="nKs-HH-j4o">
+                                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="aPy-Ob-95o"/>
+                                                <constraint firstAttribute="width" constant="40" id="qSk-vZ-vVE"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="pvM-cH-Had" secondAttribute="trailing" constant="10" id="8aa-bf-y8e"/>
+                                        <constraint firstItem="pvM-cH-Had" firstAttribute="leading" secondItem="5Zr-tC-2R4" secondAttribute="leading" constant="60" id="9kb-bc-df9"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nKs-HH-j4o" secondAttribute="bottom" priority="999" constant="34" id="Feo-bd-QTO"/>
+                                        <constraint firstItem="nKs-HH-j4o" firstAttribute="top" secondItem="5Zr-tC-2R4" secondAttribute="top" constant="10" id="HgG-tx-vuH"/>
+                                        <constraint firstItem="pvM-cH-Had" firstAttribute="top" secondItem="5Zr-tC-2R4" secondAttribute="top" constant="10" id="fzG-FE-V7i"/>
+                                        <constraint firstItem="nKs-HH-j4o" firstAttribute="leading" secondItem="5Zr-tC-2R4" secondAttribute="leading" constant="10" id="lWI-ox-LVx"/>
+                                        <constraint firstAttribute="bottom" secondItem="pvM-cH-Had" secondAttribute="bottom" constant="10" id="rgs-53-ZbR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="subtitlelabel" destination="Ho9-5Z-ftf" id="e32-iR-ONT"/>
+                                    <outlet property="titleLabel" destination="Oac-hB-FMa" id="GEG-0K-qh2"/>
+                                    <outlet property="topicTextView" destination="pvM-cH-Had" id="yx3-Vz-d7N"/>
+                                    <outlet property="userImageView" destination="nKs-HH-j4o" id="6ZZ-HB-4Gm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -843,7 +895,7 @@
         <!--Discussions-->
         <scene sceneID="acB-SV-0V2">
             <objects>
-                <navigationController id="Bcb-4O-xS8" sceneMemberID="viewController">
+                <navigationController id="Bcb-4O-xS8" customClass="ForumNavigationController" customModule="MyApneaRK" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discussions" image="icon-discussion-active" id="0dd-8v-rbC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkI-Lp-IYH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -879,6 +931,7 @@
     <resources>
         <image name="MyApneaLogo_border_whitetext" width="2490" height="668"/>
         <image name="appIcon" width="1024" height="1024"/>
+        <image name="default_user" width="162" height="162"/>
         <image name="icon-dashboard-active" width="36" height="28"/>
         <image name="icon-discussion-active" width="29" height="25"/>
         <image name="icon-research-active" width="26" height="27"/>
@@ -886,6 +939,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NlU-Lr-Zcq"/>
-        <segue reference="ay0-RW-C4q"/>
+        <segue reference="Tex-xM-ESC"/>
     </inferredMetricsTieBreakers>
 </document>

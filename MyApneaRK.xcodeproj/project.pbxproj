@@ -33,6 +33,8 @@
 		6DBF3AD51B6163FB00094C91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3AD41B6163FB00094C91 /* LoginViewController.swift */; };
 		6DBF3B0D1B629CC400094C91 /* SurveyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3B0C1B629CC400094C91 /* SurveyCollectionViewController.swift */; };
 		6DBF3B111B629E2E00094C91 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3B101B629E2E00094C91 /* TabBarController.swift */; };
+		6DBF3B471B62CB2900094C91 /* ForumNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3B461B62CB2900094C91 /* ForumNavigationController.swift */; };
+		6DBF3B491B62CEE400094C91 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF3B481B62CEE400094C91 /* TopicTableViewCell.swift */; };
 		6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC89281B3B41DA007DD498 /* AppDelegate.swift */; };
 		6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC892A1B3B41DA007DD498 /* FirstViewController.swift */; };
 		6DDC89301B3B41DA007DD498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC892E1B3B41DA007DD498 /* Main.storyboard */; };
@@ -117,6 +119,8 @@
 		6DBF3AD41B6163FB00094C91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DBF3B0C1B629CC400094C91 /* SurveyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyCollectionViewController.swift; sourceTree = "<group>"; };
 		6DBF3B101B629E2E00094C91 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6DBF3B461B62CB2900094C91 /* ForumNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumNavigationController.swift; sourceTree = "<group>"; };
+		6DBF3B481B62CEE400094C91 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		6DDC89231B3B41DA007DD498 /* MyApneaRK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApneaRK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDC89271B3B41DA007DD498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DDC89281B3B41DA007DD498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,7 +204,9 @@
 		6D27AD141B557DC0009F91B3 /* Forums */ = {
 			isa = PBXGroup;
 			children = (
+				6DBF3B461B62CB2900094C91 /* ForumNavigationController.swift */,
 				6D27AD101B557B7A009F91B3 /* ForumTableViewController.swift */,
+				6DBF3B481B62CEE400094C91 /* TopicTableViewCell.swift */,
 				6D27AD151B558995009F91B3 /* TopicShowTableViewController.swift */,
 				6D27AD171B558F9D009F91B3 /* TopicPostTableViewCell.swift */,
 				6D27AD191B559E18009F91B3 /* TopicNewViewController.swift */,
@@ -431,6 +437,7 @@
 				6DBF3ACC1B61384A00094C91 /* InitialViewController.swift in Sources */,
 				6D27AD181B558F9D009F91B3 /* TopicPostTableViewCell.swift in Sources */,
 				6D7D49641B3C4EB1005C4189 /* MyInterestInResearchSurveyTask.swift in Sources */,
+				6DBF3B471B62CB2900094C91 /* ForumNavigationController.swift in Sources */,
 				6DBF3AD01B61396B00094C91 /* WelcomePageViewController.swift in Sources */,
 				6DBF3AD51B6163FB00094C91 /* LoginViewController.swift in Sources */,
 				6D7D49561B3C3F5C005C4189 /* AboutMeSurveyTask.swift in Sources */,
@@ -447,6 +454,7 @@
 				6DDC895D1B3B49A2007DD498 /* ConsentTask.swift in Sources */,
 				6D7D496C1B3C4F4B005C4189 /* MyRiskProfileSurveyTask.swift in Sources */,
 				6DDC89291B3B41DA007DD498 /* AppDelegate.swift in Sources */,
+				6DBF3B491B62CEE400094C91 /* TopicTableViewCell.swift in Sources */,
 				6DDC892B1B3B41DA007DD498 /* FirstViewController.swift in Sources */,
 				6D7D49621B3C4E8B005C4189 /* MyHealthConditionsSurveyTask.swift in Sources */,
 				6D4268C31B50BC0D00AE3A83 /* SignUpViewController.swift in Sources */,
