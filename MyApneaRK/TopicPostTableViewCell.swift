@@ -10,8 +10,10 @@ import UIKit
 
 class TopicPostTableViewCell: UITableViewCell {
 
-    @IBOutlet var postDescriptionLabel: UILabel!
+    @IBOutlet var postTextView: UIView!
     @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var postDescriptionLabel: UILabel!
+    @IBOutlet var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

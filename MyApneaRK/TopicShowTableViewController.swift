@@ -64,6 +64,8 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
     override func viewWillAppear(animated: Bool) {
         // Load data
         refresh()
+        configureTableView()
+        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,9 +90,20 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! TopicPostTableViewCell
+        
+        
+        // Set clear background color
+        cell.backgroundColor = UIColor.clearColor()
+        
+        // Set content
         cell.usernameLabel.text = posts[indexPath.row].valueForKey("user") as? String
         cell.postDescriptionLabel?.text = posts[indexPath.row].valueForKey("description") as? String
-        cell.postDescriptionLabel.sizeToFit()
+        cell.userImageView.layer.cornerRadius = CGFloat(20)
+        cell.userImageView.clipsToBounds = true
+        
+        // Set text background
+        cell.postTextView.layer.cornerRadius = 3
+        
         return cell
     }
     
@@ -147,6 +160,20 @@ class TopicShowTableViewController: UITableViewController, UITableViewDelegate, 
             destination.topicId = self.topicId
             destination.topicName = self.title!
         }
+    }
+    
+    // MARK: - TableViewCell
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 84.0
+    }
+    
+    func refreshData() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+            self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: false)
+        })
     }
 
 }
