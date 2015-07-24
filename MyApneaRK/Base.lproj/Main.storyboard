@@ -799,28 +799,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reply" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOt-qR-hGs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reply" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOt-qR-hGs">
                                 <rect key="frame" x="279" y="83" width="44" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="g98-hm-pcU"/>
+                                    <constraint firstAttribute="width" constant="100" id="g98-hm-pcU"/>
                                     <constraint firstAttribute="height" constant="21" id="nf3-Uu-Z7C"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your reply here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vxw-E9-8ew">
                                 <rect key="frame" x="16" y="131" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwC-J6-1Jm">
-                                <rect key="frame" x="293" y="181" width="32" height="30"/>
+                                <rect key="frame" x="274" y="180" width="52" height="30"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.59999999999999998" blue="0.87058823529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="0bs-55-mRR"/>
                                     <constraint firstAttribute="height" constant="30" id="h3w-GF-5cM"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -828,7 +831,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="vwC-J6-1Jm" secondAttribute="centerX" id="GIS-Mj-O3D"/>
                             <constraint firstItem="MOt-qR-hGs" firstAttribute="top" secondItem="Zxl-Gy-twd" secondAttribute="bottom" constant="10" id="GPJ-KA-MHa"/>
@@ -861,31 +864,34 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QV0-IE-VKJ">
                                 <rect key="frame" x="16" y="120" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-hC-g54">
                                 <rect key="frame" x="16" y="163" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Topic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjf-u0-Df5">
                                 <rect key="frame" x="279" y="84" width="81" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="HW3-XS-5Pt"/>
+                                    <constraint firstAttribute="width" constant="100" id="HW3-XS-5Pt"/>
                                     <constraint firstAttribute="height" constant="21" id="dgW-2Z-k2u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upc-FH-CxM">
                                 <rect key="frame" x="277" y="209" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.59999999999999998" blue="0.87058823529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0Re-fm-ew3"/>
                                     <constraint firstAttribute="height" constant="30" id="foE-V1-I7v"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Create">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -893,7 +899,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wjf-u0-Df5" firstAttribute="top" secondItem="ZBa-vp-dQF" secondAttribute="bottom" constant="20" id="2wQ-JA-mXG"/>
                             <constraint firstItem="Upc-FH-CxM" firstAttribute="top" secondItem="hh1-hC-g54" secondAttribute="bottom" constant="15" id="8ST-3a-DSp"/>
@@ -964,6 +970,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NlU-Lr-Zcq"/>
-        <segue reference="Tex-xM-ESC"/>
+        <segue reference="ay0-RW-C4q"/>
     </inferredMetricsTieBreakers>
 </document>

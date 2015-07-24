@@ -21,6 +21,22 @@ class PostNewViewController: UIViewController {
         println("loaded reply controller")
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // Set background
+        let colorTop = UIColor(red: 255.0/255.0, green: 164.0/255.0, blue: 0.0/255.0, alpha: 1.0).CGColor
+        let colorBottom = UIColor(red: 247.0/255.0, green: 107.0/255.0, blue: 28.0/255.0, alpha: 1.0).CGColor
+        
+        let gradient:CAGradientLayer = CAGradientLayer()
+        gradient.colors = [colorTop, colorBottom]
+        gradient.locations = [0.0, 1.0]
+        let frameMax = max(self.view.frame.width, self.view.frame.height)
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: frameMax, height: frameMax)
+        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
